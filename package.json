@@ -1,0 +1,11 @@
+{
+  "name": "codepen-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A dark theme for syntax base on CodePen.io",
+  "repository": "https://github.com/trvswgnr/brackets-codepen-theme",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

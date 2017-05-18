@@ -1,0 +1,347 @@
+.line {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: Monaco, Source Sans Pro, monospace;
+  letter-spacing: 0.02em;
+}
+
+.syntax--comment {
+  color: @grey_7;
+}
+
+.syntax--entity {
+  color: @color_gold;
+
+  &.syntax--name.syntax--type {
+//    text-decoration: underline;
+    color: @color_gold;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @color_gold;
+  }
+}
+
+.syntax--keyword {
+  color: @color_gold;
+
+  &.syntax--control {
+    color: #96CBFE;
+  }
+  &.syntax--unit{
+    &.syntax--css{
+      color: @number;
+    }
+  }
+  &.syntax--operator {
+    color: #EDEDED;
+  }
+}
+
+.syntax--storage {
+  color: @color_gold;
+
+  &.syntax--modifier {
+    color: @color_gold;
+  }
+}
+
+.syntax--constant {
+  color: @color_gold;
+
+  &.syntax--numeric {
+    color: @number;
+  }
+}
+
+.syntax--variable {
+  color: @variable;
+}
+
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: @error;
+}
+
+.syntax--invalid.syntax--illegal {
+  color: @error;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+
+// String interpolation in Ruby, CoffeeScript, and others
+.syntax--string {
+  .syntax--source,
+  .syntax--meta.syntax--embedded.syntax--line {
+    color: #EDEDED;
+  }
+
+  .syntax--punctuation.syntax--section.syntax--embedded {
+    color: #00A0A0;
+
+    .syntax--source {
+      color: #00A0A0;  // Required for the end of embedded strings in Ruby #716
+    }
+  }
+}
+
+.syntax--string {
+  color: @string;
+
+  .syntax--constant {
+    color: @variable;
+  }
+
+  &.syntax--regexp {
+    color: #E9C062;
+
+    .syntax--constant.syntax--character.syntax--escape,
+    .syntax--source.syntax--ruby.syntax--embedded,
+    .syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+      color: #FF8000;
+    }
+
+    &.syntax--group {
+      color: #C6A24F;
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    &.syntax--character-class {
+      color: #B18A3D;
+    }
+  }
+
+  .syntax--variable {
+    color: #8A9A95;
+  }
+}
+
+.syntax--support {
+  color: @color_gold;
+
+  &.syntax--function {
+    color: @variable;
+  }
+
+  &.syntax--constant {
+    color: @string;
+  }
+
+  &.syntax--type.syntax--property-name.syntax--css {
+    color: @property;
+  }
+}
+
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--punctuation.syntax--tag {
+  color: @tag;
+}
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name {
+  color: @attribute;
+}
+
+.syntax--entity {
+  &.syntax--other.syntax--attribute-name {
+    color: @attribute;
+  }
+
+  &.syntax--name.syntax--tag.syntax--namespace,
+  &.syntax--other.syntax--attribute-name.syntax--namespace {
+    color: #E18964;
+  }
+}
+
+.syntax--constant.syntax--character.syntax--escape.syntax--css {
+  color: @string;
+}
+  .syntax--property-list .syntax--entity.syntax--name.syntax--tag.syntax--css {
+    color: @property;
+  }
+.syntax--meta.syntax--attribute-selector.syntax--css > .syntax--punctuation.syntax--definition.syntax--begin.syntax--entity.syntax--css, .syntax--punctuation.syntax--definition.syntax--end.syntax--entity.syntax--css {
+  color: @white;
+}
+
+.syntax--source.syntax--css, .syntax--source.syntax--less {
+  .syntax--constant.syntax--rgb-value {
+    color: @color_gold;
+  }
+}
+
+.syntax--meta {
+  &.syntax--preprocessor.syntax--c {
+    color: #8996A8;
+  }
+
+  &.syntax--preprocessor.syntax--c .syntax--keyword {
+    color: #AFC4DB;
+  }
+
+  &.syntax--cast {
+    color: #676767;
+  }
+
+  &.syntax--sgml.syntax--html .syntax--meta.syntax--doctype,
+  &.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--entity,
+  &.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--string,
+  &.syntax--xml-processing,
+  &.syntax--xml-processing .syntax--entity,
+  &.syntax--xml-processing .syntax--string {
+    color: #494949;
+  }
+
+  &.syntax--tag .syntax--entity,
+  &.syntax--tag > .syntax--punctuation,
+  &.syntax--tag.syntax--inline .syntax--entity {
+    color: @tag;
+  }
+  &.syntax--tag .syntax--name,
+  &.syntax--tag.syntax--inline .syntax--name,
+  &.syntax--tag > .syntax--punctuation {
+    color: @tag;
+  }
+
+  &.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+    text-decoration: underline;
+    color: @tag;
+  }
+
+  &.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+    color: @white;
+  }
+
+  &.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+    color: @color_gold;
+  }
+
+  &.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+    color: @color_gold;
+  }
+
+  &.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+  &.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+    color: @color_gold;
+  }
+
+  &.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+    color: #8693A5;
+  }
+
+  &.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+  &.syntax--property-value .syntax--constant {
+    color: @number;
+  }
+
+  &.syntax--constructor.syntax--argument.syntax--css {
+    color: @string;
+  }
+
+  &.syntax--diff,
+  &.syntax--diff.syntax--header {
+    color: #F8F8F8;
+    background-color: #0E2231;
+  }
+
+  &.syntax--separator {
+    color: @string;
+    background-color: #242424;
+  }
+
+  &.syntax--line.syntax--entry.syntax--logfile,
+  &.syntax--line.syntax--exit.syntax--logfile {
+    background-color: rgba(238, 238, 238, 0.16);
+  }
+
+  &.syntax--line.syntax--error.syntax--logfile {
+    background-color: #751012;
+  }
+}
+
+// Markdown Styles
+.syntax--source.syntax--gfm {
+  color: #999;
+}
+
+.syntax--gfm {
+  .syntax--markup.syntax--heading {
+    color: #eee;
+  }
+
+  .syntax--link {
+    color: #555;
+  }
+
+  .syntax--variable.syntax--list,
+  .syntax--support.syntax--quote {
+    color: #555;
+  }
+
+  .syntax--link .syntax--entity {
+    color: #ddd;
+  }
+
+  .syntax--raw {
+    color: #aaa;
+  }
+}
+
+.syntax--markdown {
+  .syntax--paragraph {
+    color: #999;
+  }
+
+  .syntax--heading {
+    color: #eee;
+  }
+
+  .syntax--raw {
+    color: #aaa;
+  }
+
+  .syntax--link {
+    color: #555;
+
+    .syntax--string {
+      color: #555;
+
+      &.syntax--title {
+        color: #ddd;
+      }
+    }
+  }
+}
+
+// JSON
+.syntax--meta.syntax--structure.syntax--dictionary.syntax--key.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json {
+  color: @white;
+  & .syntax--begin, & .syntax--end {
+    color: @white;
+  }
+}
+
+//Javascript
+.syntax--js {
+  &.syntax--entity.syntax--name.syntax--function {
+    color: @property;
+  }
+  &.syntax--keyword.syntax--control {
+    color: @color_gold;
+  }
+  &.syntax--support.syntax--function.syntax--dom {
+    color: @property;
+  }
+  &.syntax--variable.syntax--other.syntax--property {
+    color: @property;
+  }
+}
+.syntax--meta.syntax--function-call.syntax--js > .syntax--entity.syntax--name.syntax--function.syntax--js {
+  color: @color_gold;
+}
+.syntax--meta.syntax--arguments.syntax--js > .syntax--variable.syntax--language.syntax--js {
+  color: @color_gold;
+}
+
+//HTML
+.syntax--html {
+  .syntax--entity.syntax--other.syntax--attribute-name {
+    color: @color_gold;
+  }
+}

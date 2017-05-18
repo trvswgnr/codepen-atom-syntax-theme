@@ -1,0 +1,85 @@
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// Theme Colors
+@color_gold:     #ddca7e; @attribute: @color_gold;
+@color_sage:     #96b38a; @string: @color_sage;
+@color_ochre:    #d0782a; @number: @color_ochre;
+@color_blue:     #809bbd; @variable: @color_blue;
+@color_venus:    #9a8297; @property: @color_venus;
+@color_barley:   #a7925a; @tag: @color_barley;
+@color_pink:     #f92672; @error: @color_pink;
+@color_lime:     #57e236; @matching_bracket: @color_lime;
+@color_sycamore: #8d8042;
+@color_lavender: #ae81ff;
+@color_pablo:    #75715e;
+@color_seafoam:  #429870;
+@color_orange:   #ff6400;
+
+// White, Greys, Black
+@white: #ffffff;
+@white_05: fadeout(@white, 95%);
+@white_10: fadeout(@white, 90%);
+@white_25: fadeout(@white, 75%);
+@white_50: fadeout(@white, 50%);
+@color_eggshell: #f8f8f2;
+@color_eggshell_50: fadein(@color_eggshell, 0.5);
+@grey_1:  #eeeeee;
+@grey_2:  #cccccc;
+@grey_3:  #999999;
+@grey_4:  #8d8d8d;
+@grey_5:  #808080;
+@grey_6:  #767676;
+@grey_7:  #666666;
+@grey_8:  #555555;
+@grey_9:  #4b4b4b;
+@grey_10: #444444;
+@grey_11: #343434;
+@grey_12: #333333;
+@grey_13: #272726;
+@grey_14: #222222;
+@grey_15: #1d1f20; @background: @grey_15;
+@grey_16: #1b1b1b;
+@black:   #000000;
+
+// General colors
+@syntax-text-color: #f8f8f2;
+@syntax-cursor-color: white;
+@syntax-selection-color: #444;
+@syntax-selection-flash-color: #eee;
+@syntax-background-color: @background;
+
+// Guide colors
+@syntax-wrap-guide-color: rgba(197, 200, 198, .1);
+@syntax-indent-guide-color: rgba(197, 200, 198, .2);
+@syntax-invisible-character-color: rgba(197, 200, 198, .2);
+
+// For find and replace markers
+@syntax-result-marker-color: #888;
+@syntax-result-marker-color-selected: white;
+
+// Gutter colors
+@syntax-gutter-text-color: @grey_11;
+@syntax-gutter-text-color-selected: lighten(@syntax-gutter-text-color, 10%);
+@syntax-gutter-background-color: @syntax-background-color;
+@syntax-gutter-background-color-selected: rgba(255, 255, 255, 0.14);
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: #96CBFE;
+@syntax-color-added: #A8FF60;
+@syntax-color-modified: #E9C062;
+@syntax-color-removed: #CC6666;
+
+// For language entity colors
+@syntax-color-variable: #809bbd;
+@syntax-color-constant: #809bbd;
+@syntax-color-property: #9a8297;
+@syntax-color-value: #ddca7e;
+@syntax-color-function: #809bbd;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: #96b38a;
+@syntax-color-keyword: #ddca7e;
+@syntax-color-tag: #a7925a;
+@syntax-color-attribute: #ddca7e;
+@syntax-color-import: @syntax-color-keyword;
+@syntax-color-snippet: @syntax-color-constant;

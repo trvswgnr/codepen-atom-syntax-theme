@@ -26,7 +26,7 @@
   color: @color_gold;
 
   &.syntax--control {
-    color: #96CBFE;
+    color: @variable;
   }
   &.syntax--unit{
     &.syntax--css{
@@ -343,5 +343,33 @@
 .syntax--html {
   .syntax--entity.syntax--other.syntax--attribute-name {
     color: @color_gold;
+  }
+}
+
+// Less
+.syntax--less, .syntax--scss, .syntax--css {
+  &.syntax--keyword.syntax--other.syntax--unit {
+    color: @number;
+  }
+  &.syntax--keyword.syntax--control.syntax--at-rule.syntax--import {
+    color: @variable;
+    .syntax--punctuation.syntax--definition.syntax--keyword {
+      color: @variable;
+    }
+  }
+}
+
+.syntax--scss {
+  &.syntax--entity.syntax--name.syntax--tag.syntax--reference {
+    color: @white;
+  }
+  .syntax--at-rule {
+    color: @variable;
+    .syntax--keyword {
+      color: @variable;
+    }
+    .syntax--begin, .syntax--end {
+      color: @white;
+    }
   }
 }

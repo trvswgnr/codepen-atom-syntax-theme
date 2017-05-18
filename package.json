@@ -1,7 +1,7 @@
 {
   "name": "codepen-syntax",
   "theme": "syntax",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A dark theme for syntax base on CodePen.io",
   "repository": "https://github.com/trvswgnr/codepen-atom-syntax-theme",
   "license": "MIT",
